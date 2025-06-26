@@ -1,0 +1,865 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 2.25rem;
+}
+h2{
+    font-size: 1.25rem;
+}
+h3{
+    font-size: 1rem;
+}
+h4{
+    font-size: 0.875rem;
+}
+.grid{
+    width: 90rem;
+    margin: 0 auto;
+}
+body{
+    width: 100vw;
+    font-family: "Inter", sans-serif;
+}
+header{
+    max-height: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo{
+    width: 7.375rem;
+    height: 100%;
+    margin-left: 4.375rem;
+}
+header ul{
+    list-style: none;
+    width: 46.5625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header ul li{
+    transition: all ease-in-out 1s;
+}
+header ul li:hover{
+    transform: translateY(-5px);
+}
+header a{
+    text-decoration: none;
+    color: #000;
+}
+.country-signin-wrapper{
+    width: 21.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4.375rem;
+}
+.country{
+    min-width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.country h3{
+    font-weight: 700;
+}
+.country img{
+    width: 2.8125rem;
+    height: auto;
+}
+.regSignin{
+    width: 10.4687rem;
+    display: flex;
+    justify-content: space-between;
+}
+.regSignin h3{
+    padding: 3px 6px;
+}
+.regSignin .signIn{
+    color: #fff;
+    background: #006BF6;
+}
+.menuIcon{
+    display: none;
+    position: relative;
+}
+.slideMenu{
+    width: 24rem;
+    height: 307vh;
+    background: #fff;
+    position: absolute;
+    right: -1120%;
+    top: 158%;
+    z-index: 9999;
+    transition: all ease-in-out 0.30s;
+}
+.slideMenu.active{
+    position: absolute;
+    right: -27%;
+    top: 158%;
+}
+.slideMenu li{
+    padding-top: 4rem;
+    text-align: center;
+}
+.slideMenu a{
+    font-size: 2rem;
+    text-align: center;
+}
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+.banner h1{
+    line-height: 4.75rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: 800;
+    padding:0 3.3125rem 0 4.75rem;
+    position: absolute;
+    bottom: 9.2857%;
+}
+.rounds{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.rounds:last-child{
+    margin: 0px;
+}
+.rounds div{
+    width: 0.625rem;
+    height: 0.625rem;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 1.5625rem;
+    animation: roundAnimation 12s infinite;
+    animation-timing-function: ease-in-out;
+}
+.rounds .roundOne{
+    animation-delay: 0s;
+}
+.rounds .roundTwo{
+    animation-delay: 3s;
+}
+.rounds .roundThree{
+    animation-delay: 6s;
+}
+.rounds .roundFour{
+    animation-delay: 9s;
+}
+.selectionSection{
+    width: 100%;
+    height: 6.25rem;
+}
+.selectionSection .grid{
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(-56%);
+    overflow: unset;
+}
+.selectionSection .grid .selectionBar{
+    width: 62.5rem;
+    border-radius: 2.1875rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    background: #fff;
+}
+.selectionSection .grid .selectionBar select{
+    border: none;
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+}
+.selectionSection .grid .selectionBar div{
+    display: flex;
+}
+.selectionSection .grid .selectionBar button{
+    font-size: 1.25rem;
+    padding: 1em;
+    border: none;
+    background: #fff;
+}
+.selectionSection .grid h2{
+    line-height: 4.375rem;
+    font-weight: 400;
+}
+.selectionSection .grid .enquiryBtn{
+    width: 16rem;
+    line-height: 4.375rem;
+    border-radius: 2.1875rem;
+    font-weight: 400;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    text-align: center;
+    background: #fff;
+}
+.verticalLine{
+    height: 3.125rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+.trendingDestinationSection h2{
+    font-weight: 600;
+    padding: 3.125rem 0 1.875rem 0;
+}
+.box-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.125rem;
+}
+.box-wrapper .firstBox{
+    width: 16.5rem;
+    height: 29.3125rem;
+    background: url(../img/cameronHighlands.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .secondBox{
+    width: 34.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-wrapper .secondBox .secondBoxOne{
+    width: 100%;
+    height: 13.6875rem;
+    background: url(../img/pangkorIsland.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .secondBox .secondBoxTwo{
+    width: 100%;
+    height: 13.6875rem;
+    display: flex;
+    justify-content: space-between;
+}
+.box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-one{
+    width: 16.5rem;
+    height: 100%;
+    background: url(../img/penang.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-two{
+    width: 16.5rem;
+    height: 100%;
+    background: url(../img/malacca.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .thirdBox{
+    width: 16.5rem;
+    height: 29.3125rem;
+    background: url(../img/kualaLumpur.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .fourthBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-wrapper .fourthBox .fourthBoxOne{
+    width: 16.5rem;
+    height: 13.6875rem;
+    background: url(../img/pehentianIslands.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .fourthBox .fourthBoxTwo{
+    width: 16.5rem;
+    height: 13.6875rem;
+    background: url(../img/tiomanIsland.png) no-repeat;
+    background-size: contain;
+}
+.box-wrapper .mainDestinationBox{
+    border-radius: 0.75rem;
+    position: relative;
+    transition: all ease-in-out 0.64s;
+}
+.box-wrapper .mainDestinationBox:hover{
+    filter: brightness(0.8);
+}
+.box-wrapper .mainDestinationBox h2{
+    line-height: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0 0.3125rem 0 1.25rem;
+    position: absolute;
+    bottom: 4.2643%;
+    font-weight: 600;
+}                      
+.cardSection{
+    position: relative;
+    padding-bottom: 4.2812rem;
+}
+.cardSection .cardSectionHeading{
+    margin: 3.125rem 0 1.875rem 0;
+}
+.cardWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cardWrapper .card{
+    width: 20.1562rem;
+    height: 28.125rem;
+    background-color: #006BF6;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cardWrapper .cardOne{
+    background: url(../img/LangkawiIsland.png) no-repeat center;
+    background-size: contain;
+}
+.cardWrapper .cardTwo{
+    background: url(../img/KualaLumpurCity.png) no-repeat center;
+    background-size: contain;
+}
+.cardWrapper .cardThree{
+    background: url(../img/GentingHighlands.png) no-repeat center;
+    background-size: contain;
+}
+.cardWrapper .cardFour{
+    background: url(../img/PenangHeritage.png) no-repeat center;
+    background-size: contain;
+}
+.cardWrapper .card div{
+    width: 100%;
+    height: 6.25rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0%;
+}
+.cardWrapper .card .mainText{
+    margin: 1.1875rem 0 0.9375rem 0.9375rem;
+    font-weight: 600;
+}
+.cardWrapper .card .subText{
+    margin: 0 0 0 0.9375rem;
+    font-weight: 400;
+}
+.cardWrapper .card .price{
+    padding: 0.3125rem;
+    font-weight: 600;
+    color: #fff;
+    background: #000;
+    position: absolute;
+    right: 0%;
+    top: 14%;
+}
+.roundsTwo{
+    bottom: 0%;
+}
+.roundsTwo div{
+    background: rgba(217, 217, 217, 0.493);
+}
+.serviceSection h2{
+    margin: 3.125rem 0 1.875rem 0;
+}
+.serviceBoxsWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.125rem;
+}
+.serviceBoxsWrapper div{
+    width: 12.375rem;
+    height: 11.6875rem;
+    border-radius: 0.75rem;
+    position: relative;
+}
+.serviceBoxsWrapper .serviceBoxOne{
+    background: url(../img/TourPackages.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper .serviceBoxTwo{
+    background: url(../img/FullDayTours.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper .serviceBoxThree{
+    background: url(../img/HalfDayTours.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper .serviceBoxFour{
+    background: url(../img/NightTours.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper .serviceBoxFive{
+    background: url(../img/Transportations.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper .serviceBoxSix{
+    background: url(../img/FestivalPackages.png) no-repeat center;
+    background-size: contain;
+}
+.serviceBoxsWrapper h3{
+    color: #fff;
+    line-height: 1.1875rem;
+    padding: 0 0.25rem 0 1.25rem;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0%;
+    bottom: 13.3689%;
+}
+.aboutAndVideoWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.aboutSectionHeading{
+    margin: 3.125rem 0 1.875rem 0;
+}
+.aboutAndVideoWrapper h2{
+    width: 43.4375rem;
+    height: auto;
+    font-weight: 400;
+    text-align: justify;
+}
+.aboutAndVideoWrapper h2 span{
+    color: #006BF6;
+}
+.aboutAndVideoWrapper video{
+    width: 43.4375rem;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-bottom: 3.125rem;
+}
+.customersResponseSection .grid .firstRow{
+    display: flex;
+    justify-content: space-between;
+}
+.customersResponseSection .grid .customersResponseHeading{
+    margin-top: 3.125rem;
+}
+.customersResponseSection .grid .secondRow{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6.25rem;
+}
+.customersResponseSection .grid div div{
+    width: 21.4687rem;
+    height: 12.3437rem;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    margin-top: 1.875rem;
+}
+.customersResponseSection .grid div div h2{
+    padding: 0.9375rem 0 2.34375rem 0.9375rem;
+    font-weight: 500;
+}
+.customersResponseSection .grid div div h3{
+    padding-left: 2.53125rem;
+    font-weight: 400;
+}
+footer{
+    background: #006BF6;
+    padding: 0.9375rem 0 2.1875rem 0;
+}
+footer .grid{
+    display: flex;
+    justify-content: space-between;
+}
+footer .grid a{
+    text-decoration: none;
+    color: #fff;
+}
+footer .grid ul li{
+    list-style: none;
+    color: #fff;
+    margin-top: 1.25rem;
+    font-weight: 400;
+}
+#footerMainHeader{
+    font-weight: 600;
+}
+.socialMediaIcons a{
+    padding-right: 1.25rem;
+}
+@keyframes roundAnimation{
+    0%,25%,100%{
+            transform: scale(1);
+    }
+    10%{
+            transform: scale(1.5);
+        }
+}
+@media (min-width:1025px) and (max-width:1440px){
+    html{
+        font-size: 11px;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    html{
+        font-size: 11px;
+    }
+    .mainNav{
+        margin: 0 1rem;
+    }
+    .regSignin{
+        width: 11.4687rem;
+    }
+    .selectionSection .grid .selectionBar{
+        width: 46.5rem;
+    }
+    .selectionSection .grid{
+        width: 66rem;
+    }
+    .banner h1{
+        font-size: 1.25rem;
+        bottom: 15.2857%;
+    }
+    .trendingDestinationSection .grid{
+        width: 70rem
+    }
+    .box-wrapper{
+        justify-content: space-evenly;
+    }
+    .box-wrapper .secondBox{
+        width: 33.875rem;
+        height: 13.6875rem;
+    }
+    .box-wrapper .secondBox .secondBoxOne{
+        display: none;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-one{
+        height: 29.3125rem;
+        background: url(../img/penangOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-two{
+        height: 29.3125rem;
+        background: url(../img/kualaLumperOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .fourthBox{
+        display: none;
+    }
+    .cardWrapper .cardFour{
+        display: none;
+    }
+    .cardSection .grid{
+        width: 70rem;
+    }
+    .serviceSection .grid{
+        width: 70rem;
+    }
+    .serviceBoxsWrapper div{
+        margin-right: 1rem;
+    }
+    .aboutAndVideoWrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutSection .grid{
+        width: 70rem;
+    }
+    .aboutAndVideoWrapper h2{
+        width: 100%;
+    }
+    .aboutAndVideoWrapper video{
+        width: 100%;
+    }
+    .customersResponseSection .grid{
+        width: 70rem;
+    }
+    .customersResponseSection .grid div div:last-child{
+        display: none;
+    }
+    footer .grid{
+        width: 70rem;
+    }
+}
+@media (min-width:601px) and (max-width:767px){
+    html{
+        font-size: 11px;
+    }
+    .regSignin{
+        width: 11.4687rem;
+    }
+    header ul{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .menuIcon .slideMenu.active{
+        display: block;
+        right: -46%;
+    }
+    .country-signin-wrapper{
+        margin-right: 1rem;
+    }
+    .selectionSection{
+        height: 2.25rem;
+    }
+    .selectionSection .grid .selectionBar{
+        width: 46.5rem;
+    }
+    .selectionSection .grid{
+        width: 54rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .selectionSection .grid form{
+        margin-bottom: 1rem;
+    }
+    .banner h1{
+        display: none;
+    }
+    .trendingDestinationSection{
+        overflow: auto;
+    }
+    .trendingDestinationSection .grid{
+        width: 53rem;
+        overflow: auto;
+    }
+    .box-wrapper{
+        width: 70rem;
+        justify-content: space-evenly;
+    }
+    .box-wrapper .secondBox{
+        width: 33.875rem;
+        height: 13.6875rem;
+    }
+    .box-wrapper .secondBox .secondBoxOne{
+        display: none;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-one{
+        height: 29.3125rem;
+        background: url(../img/penangOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-two{
+        height: 29.3125rem;
+        background: url(../img/kualaLumperOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .fourthBox{
+        display: none;
+    }
+    .cardWrapper{
+        width: 64rem;
+    }
+    .cardWrapper .card{
+        margin-bottom: 1rem;
+    }
+    .cardWrapper .cardFour{
+        display: none;
+    }
+    .cardSection{
+        overflow: auto;
+    }
+    .cardSection .grid{
+        width: 53rem;
+        overflow: auto;
+    }
+    .serviceSection{
+        overflow: auto;
+    }
+    .serviceSection .grid{
+        width: 53rem;
+        overflow: auto;
+    }
+    .serviceBoxsWrapper{
+        width: 70rem;
+    }
+    .serviceBoxsWrapper div{
+        margin-right: 1rem;
+    }
+    .aboutAndVideoWrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutSection .grid{
+        width: 53rem;
+    }
+    .aboutAndVideoWrapper h2{
+        width: 100%;
+    }
+    .aboutAndVideoWrapper video{
+        width: 100%;
+    }
+    .customersResponseSection{
+        overflow: auto;
+    }
+    .customersResponseSection .grid{
+        width: 53rem;
+        overflow: auto;
+    }
+    .customersResponseSection .grid div{
+        width: 90rem;
+        margin-left: 0.2rem;
+    }
+    .customersResponseSection .grid div div:last-child{
+        display: block;
+    }
+    footer .grid{
+        width: 53rem;
+        flex-wrap: wrap;
+    }
+    footer .grid ul:nth-child(2){
+        width: 28rem;
+    }
+    .socialMediaIcons a {
+        padding-right: 0.25rem;
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    html{
+        font-size: 6px;
+    }
+    .regSignin{
+        width: 13.4687rem;
+    }
+    header ul{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .menuIcon .slideMenu{
+        top: 126%;
+    }
+    .slideMenu.active{
+        right: 0;
+        top: 126%;
+        display: block;
+    }
+    .menuIcon img{
+        width: 80%;
+    }
+    .country-signin-wrapper{
+        width: 28.875rem;
+        margin-right: 0rem;
+    }
+    .selectionSection{
+        height: 2.25rem;
+    }
+    .selectionSection .grid .selectionBar{
+        width: 46.5rem;
+    }
+    .selectionSection .grid{
+        width: 54rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .selectionSection .grid form{
+        margin-bottom: 1rem;
+    }
+    .banner h1{
+        display: none;
+    }
+    .trendingDestinationSection{
+        overflow: auto;
+    }
+    .trendingDestinationSection .grid{
+        width: 50rem;
+        overflow: auto;
+    }
+    .box-wrapper{
+        width: 70rem;
+        justify-content: space-evenly;
+    }
+    .box-wrapper .secondBox{
+        width: 33.875rem;
+        height: 13.6875rem;
+    }
+    .box-wrapper .secondBox .secondBoxOne{
+        display: none;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-one{
+        height: 29.3125rem;
+        background: url(../img/penangOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .secondBox .secondBoxTwo .secondBoxTwo-two{
+        height: 29.3125rem;
+        background: url(../img/kualaLumperOgImg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .box-wrapper .fourthBox{
+        display: none;
+    }
+    .cardWrapper .cardFour{
+        display: none;
+    }
+    .cardWrapper .card{
+        margin-bottom: 1rem;
+    }
+    .cardSection{
+        overflow: auto;
+    }
+    .cardSection .grid{
+        width: 50rem;
+        overflow: auto;
+    }
+    .cardSection .grid .cardWrapper{
+        width: 64rem;
+    }
+    .serviceSection{
+        overflow: auto;
+    }
+    .serviceSection .grid{
+        width: 50rem;
+        overflow: auto;
+    }
+    .serviceBoxsWrapper{
+        width: 70rem;
+    }
+    .serviceBoxsWrapper div{
+        margin-right: 1rem;
+    }
+    .aboutAndVideoWrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutSection .grid{
+        width: 50rem;
+    }
+    .aboutAndVideoWrapper h2{
+        width: 100%;
+    }
+    .aboutAndVideoWrapper video{
+        width: 100%;
+    }
+    .customersResponseSection{
+        overflow: auto;
+    }
+    .customersResponseSection .grid{
+        width: 50rem;
+        overflow: auto;
+    }
+    .customersResponseSection .grid div{
+        width: 90rem;
+        margin-left: 0.2rem;
+    }
+    .customersResponseSection .grid div div:last-child{
+        display: block;
+    }
+    footer .grid{
+        width: 50rem;
+        flex-wrap: wrap;
+    }
+    footer .grid ul:nth-child(2){
+        width: 28rem;
+    }
+    .socialMediaIcons a {
+        padding-right: 0.25rem;
+    }
+    .socialMediaIcons a img{
+        width: 2rem;
+    }
+}

@@ -619,12 +619,14 @@ footer .grid ul li{
     .banner h1{
         display: none;
     }
-    .trendingDestinationSection{
-        overflow: auto;
-    }
     .trendingDestinationSection .grid{
         width: 53rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .trendingDestinationSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .box-wrapper{
         width: 70rem;
@@ -659,19 +661,23 @@ footer .grid ul li{
     .cardWrapper .cardFour{
         display: none;
     }
-    .cardSection{
-        overflow: auto;
-    }
     .cardSection .grid{
         width: 53rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
-    .serviceSection{
-        overflow: auto;
+    .cardSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .serviceSection .grid{
         width: 53rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .serviceSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .serviceBoxsWrapper{
         width: 70rem;
@@ -692,12 +698,14 @@ footer .grid ul li{
     .aboutAndVideoWrapper video{
         width: 100%;
     }
-    .customersResponseSection{
-        overflow: auto;
-    }
     .customersResponseSection .grid{
         width: 53rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .customersResponseSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .customersResponseSection .grid div{
         width: 90rem;
@@ -762,12 +770,14 @@ footer .grid ul li{
     .banner h1{
         display: none;
     }
-    .trendingDestinationSection{
-        overflow: auto;
-    }
     .trendingDestinationSection .grid{
         width: 50rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .trendingDestinationSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .box-wrapper{
         width: 70rem;
@@ -799,22 +809,26 @@ footer .grid ul li{
     .cardWrapper .card{
         margin-bottom: 1rem;
     }
-    .cardSection{
-        overflow: auto;
-    }
     .cardSection .grid{
         width: 50rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .cardSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .cardSection .grid .cardWrapper{
         width: 64rem;
     }
-    .serviceSection{
-        overflow: auto;
-    }
     .serviceSection .grid{
         width: 50rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .serviceSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .serviceBoxsWrapper{
         width: 70rem;
@@ -835,12 +849,14 @@ footer .grid ul li{
     .aboutAndVideoWrapper video{
         width: 100%;
     }
-    .customersResponseSection{
-        overflow: auto;
-    }
     .customersResponseSection .grid{
         width: 50rem;
         overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .customersResponseSection .grid::-webkit-scrollbar{
+        display: none;
     }
     .customersResponseSection .grid div{
         width: 90rem;

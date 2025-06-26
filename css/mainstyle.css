@@ -93,13 +93,19 @@ header a{
 }
 .slideMenu{
     width: 24rem;
-    height: 307vh;
+    height: 100vh;
     background: #fff;
     position: absolute;
     right: -1120%;
     top: 158%;
     z-index: 9999;
-    transition: all ease-in-out 0.30s;
+    transition: all ease-in-out 0.64s;
+}
+.slideMenuWrapper{
+    width: 24rem;
+    position: fixed;
+    height: 100vh;
+    background: #fff;
 }
 .slideMenu.active{
     position: absolute;
